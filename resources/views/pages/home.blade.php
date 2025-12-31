@@ -37,7 +37,7 @@
 
                 <!-- RIGHT IMAGE -->
                 <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                    <img src="{{ asset('images/profile.jpg') }}" class="hero-image img-fluid"
+                    <img src="{{ asset('pubic/images/profile.jpg') }}" class="hero-image img-fluid"
                         alt="Myo Tun Naung – Software Developer & IT Educator">
                 </div>
 
@@ -199,7 +199,7 @@
                 <!-- Project 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('images/projects/gacportal.png') }}" class="card-img-top"
+                        <img src="{{ asset('public/images/projects/gacportal.png') }}" class="card-img-top"
                             alt="Education Platform">
                         <div class="card-body">
                             <h5 class="fw-bold">Education Platform (Student Portal)</h5>
@@ -219,7 +219,7 @@
                 <!-- Project 2 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('images/projects/eduvalleymm.png') }}" class="card-img-top"
+                        <img src="{{ asset('public/images/projects/eduvalleymm.png') }}" class="card-img-top"
                             alt="Company Website">
                         <div class="card-body">
                             <h5 class="fw-bold">Company Websites</h5>
@@ -239,7 +239,7 @@
                 <!-- Project 3 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('images/projects/restaurant-pos.jpg') }}" class="card-img-top"
+                        <img src="{{ asset('public/images/projects/restaurant-pos.jpg') }}" class="card-img-top"
                             alt="Training System">
                         <div class="card-body">
                             <h5 class="fw-bold">Restaurant POS</h5>
