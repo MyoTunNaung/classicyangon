@@ -1,0 +1,194 @@
+/* HERO SECTION */
+.hero-section {
+    min-height: 100vh;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* soft decorative shapes */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 420px;
+    height: 420px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    bottom: -140px;
+    left: -140px;
+    width: 320px;
+    height: 320px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+.hero-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    opacity: 0.9;
+    max-width: 520px;
+}
+.hero-buttons .btn {
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+.hero-buttons .btn-outline-primary {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.hero-buttons .btn-outline-primary:hover {
+    background-color: #ffffff;
+    color: #0d6efd;
+}
+.hero-image {
+    max-width: 380px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+#experience .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#experience .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+/* PROJECTS SECTION */
+.project-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 40px rgba(0,0,0,0.15);
+}
+
+.project-card .badge {
+    font-weight: 500;
+}
+
+/* SKILLS SECTION */
+#skills .skill-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+#skills .skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.15);
+}
+
+#skills .skill-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+#skills h5 {
+    margin-bottom: 10px;
+}
+
+#profile .card {
+    border-radius: 18px;
+}
+
+#profile p {
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* PROFILE SECTION */
+.profile-card {
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+.profile-lead {
+    font-size: 1.3rem;
+    line-height: 1.9;
+    color: #212529;
+}
+
+.profile-text {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #495057;
+}
+
+/* Highlighted keywords */
+.highlight {
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+.contact-card {
+    border-radius: 16px;
+}
+
+.contact-item strong {
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6c757d;
+}
+
+.contact-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.contact-link {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}

@@ -4,215 +4,435 @@
 
 @section('content')
 
-<!-- Hero Section -->
-<section class="bg-light py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-7">
-                <h1 class="fw-bold mb-3">
-                    Myo Tun Naung
-                </h1>
-                <h4 class="text-primary mb-3">
-                    Professional Developer & Technology Educator
-                </h4>
-                <p class="lead">
-                    20+ years of experience in software development, IT education,
-                    and building real‑world technology solutions for businesses
-                    and students.
-                </p>
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
 
-                <a href="#profile" class="btn btn-primary me-2">
-                    View Profile
-                </a>
-                <a href="#contact" class="btn btn-outline-secondary">
-                    Contact Me
-                </a>
-            </div>
+                <!-- LEFT CONTENT -->
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="hero-title mb-3">
+                        Myo Tun Naung
+                    </h1>
 
-            <div class="col-md-5 text-center">
-                <img src="https://via.placeholder.com/350x350"
-                     class="img-fluid rounded-circle shadow"
-                     alt="Myo Tun Naung">
-            </div>
-        </div>
-    </div>
-</section>
+                    <h4 class="bg-light text-primary mb-3">
+                        Professional Software Developer & Computer Teacher
+                    </h4>
 
-<!-- Profile Section -->
-<section id="profile" class="py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 mx-auto text-center">
-                <h2 class="fw-bold mb-4">Professional Profile</h2>
-
-                <p class="lead">
-                    I am a Professional Software Developer and Technology Educator
-                    with over <strong>20 years of experience</strong> in computer science,
-                    software development, and IT education.
-                </p>
-
-                <p>
-                    I began my academic journey at the University of Computer Studies,
-                    Mandalay (UCSM), where I earned a Bachelor of Computer Technology (Honours).
-                    Since 2003, I have dedicated my career to teaching, mentoring students,
-                    and building real‑world software solutions for businesses and institutions.
-                </p>
-
-                <p>
-                    My mission is to empower students, educators, and organizations
-                    through practical technology, modern software solutions,
-                    and sustainable digital platforms.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Experience Section -->
-<section id="experience" class="bg-light py-5">
-    <div class="container">
-        <h2 class="fw-bold text-center mb-5">Professional Experience</h2>
-
-        <div class="row">
-            <div class="col-md-10 mx-auto">
-
-                <div class="mb-4">
-                    <h5 class="fw-bold">Manager – Education Valley (Yangon)</h5>
-                    <span class="text-muted">2023 – Present</span>
-                    <p class="mt-2">
-                        Leading international education consultancy services,
-                        supporting Myanmar students to study abroad in countries
-                        such as the US, UK, Canada, Ireland, Germany, and Switzerland.
-                        Also responsible for building education platforms and systems.
+                    <p class="hero-text mb-4">
+                        Over 20+ years of experience in software development and IT education,
+                        delivering real‑world technology solutions for businesses and students.
+                        Specialized in PHP, Laravel, and modern web technologies.
                     </p>
+
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-sm me-3">
+                            Contact Me
+                        </a>
+                        <a href="#projects" class="btn btn-primary btn-sm">
+                            View Projects
+                        </a>
+                    </div>
                 </div>
 
-                <div class="mb-4">
-                    <h5 class="fw-bold">Founder & Senior Instructor – Classic Computer Center</h5>
-                    <span class="text-muted">2003 – 2020</span>
-                    <p class="mt-2">
-                        Founded and operated a computer training center in Pakokku,
-                        teaching thousands of students from universities and technology institutes.
-                        Subjects included programming, web development, hardware,
-                        and final‑year project support.
-                    </p>
-                </div>
-
-                <div class="mb-4">
-                    <h5 class="fw-bold">Supervisor – Industrial Painting Sector (Singapore)</h5>
-                    <span class="text-muted">2013 – 2015</span>
-                    <p class="mt-2">
-                        Worked in a supervisory role in Singapore, gaining
-                        international work experience, discipline,
-                        and organizational leadership skills.
-                    </p>
+                <!-- RIGHT IMAGE -->
+                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                    <img src="{{ asset('images/profile.jpg') }}" class="hero-image img-fluid"
+                        alt="Myo Tun Naung – Software Developer & IT Educator">
                 </div>
 
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Skills Section -->
-<section id="skills" class="py-5">
-    <div class="container">
-        <h2 class="fw-bold text-center mb-5">Skills & Technology Stack</h2>
+    <!-- Profile Section -->
+    <section id="profile" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-9">
 
-        <div class="row text-center">
+                    <div class="profile-card shadow-sm p-4 p-md-5 text-center">
 
-            <div class="col-md-4 mb-4">
-                <h5 class="fw-bold">Frontend</h5>
-                <p>
-                    HTML, CSS, JavaScript<br>
-                    jQuery, Bootstrap 5
-                </p>
-            </div>
+                        <h2 class="fw-bold mb-4">Professional Profile</h2>
 
-            <div class="col-md-4 mb-4">
-                <h5 class="fw-bold">Backend</h5>
-                <p>
-                    PHP, Laravel Framework<br>
-                    Java, Spring Boot
-                </p>
-            </div>
+                        <!-- Paragraph 1 -->
+                        <p class="profile-lead mb-4">
+                            I am a <span class="highlight">Professional Software Developer</span>
+                            and <span class="highlight">Computer Teacher</span> with over
+                            <strong>20+ years of experience</strong> in computer science,
+                            software development, and IT education.
+                            I began my academic journey at the
+                            <span class="highlight">University of Computer Studies, Mandalay (UCSM)</span>,
+                            where I earned a
+                            <span class="highlight">B.C.Tech (Honours) – Bachelor of Computer Technology</span>.
+                        </p>
 
-            <div class="col-md-4 mb-4">
-                <h5 class="fw-bold">Database</h5>
-                <p>
-                    MySQL<br>
-                    Oracle Database<br>
-                    Microsoft SQL Server
-                </p>
-            </div>
+                        <!-- Paragraph 2 -->
+                        <p class="profile-text mb-0">
+                            Since 2003, I have dedicated my career to teaching, mentoring students,
+                            and building real‑world software solutions for businesses and institutions.
+                        </p>
 
-            <div class="col-md-4 mb-4">
-                <h5 class="fw-bold">Education & Training</h5>
-                <p>
-                    Programming Instruction<br>
-                    Project Supervision<br>
-                    Thesis & Presentation Support
-                </p>
-            </div>
+                        <!-- Paragraph 3 -->
+                        <p class="profile-text mb-0">
+                            My mission & vision is to empower students, educators, and organizations through
+                            practical technology, modern software solutions, and sustainable digital platforms.
+                        </p>
 
-            <div class="col-md-4 mb-4">
-                <h5 class="fw-bold">Hardware & IoT</h5>
-                <p>
-                    Arduino<br>
-                    Raspberry Pi
-                </p>
-            </div>
+                    </div>
 
-            <div class="col-md-4 mb-4">
-                <h5 class="fw-bold">Other Technologies</h5>
-                <p>
-                    Git & GitHub<br>
-                    System Design<br>
-                    Business Software Solutions
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="bg-dark text-light py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 mx-auto text-center">
-
-                <h2 class="fw-bold mb-4">Contact Information</h2>
-
-                <p class="mb-2">
-                    <strong>Name:</strong> Myo Tun Naung
-                </p>
-
-                <p class="mb-2">
-                    <strong>Phone:</strong> +95 9 430 718 44
-                </p>
-
-                <p class="mb-2">
-                    <strong>Email:</strong>
-                    <a href="mailto:myotunnoung@gmail.com" class="text-warning text-decoration-none">
-                        myotunnoung@gmail.com
-                    </a>
-                </p>
-
-                <p class="mb-2">
-                    <strong>Location:</strong> Yangon, Myanmar
-                </p>
-
-                <p class="mt-4">
-                    <a href="https://www.facebook.com/myotun.noung.9"
-                       target="_blank"
-                       class="btn btn-outline-light">
-                        Facebook Profile
-                    </a>
-                </p>
-
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="bg-light py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Professional Experience</h2>
+                <p class="text-muted">
+                    Industry, education, and international professional background
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="fw-bold">
+                                Senior Software Developer, Founder & Teacher
+                            </h5>
+                            <h6 class="text-primary">
+                                Classic Yangon · 2025 – Present
+                            </h6>
+                            <p class="mt-3">
+                                Managing IT systems and digital platforms including website and portal for
+                                business and education consultancy operations, ensuring
+                                reliability, scalability, and smooth daily operations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="fw-bold">
+                                Freelance IT Manager
+                            </h5>
+                            <h6 class="text-primary">
+                                Education Valley (Yangon) · 2023 – Present
+                            </h6>
+                            <p class="mt-3">
+                                Leading international education consultancy services,
+                                supporting Myanmar students to study abroad in the US,
+                                UK, Canada, Germany, etc. Also responsible for building company website and education portal
+                                platforms
+                                and IT systems.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="fw-bold">
+                                Founder & Senior Instructor
+                            </h5>
+                            <h6 class="text-primary">
+                                Classic Computer Center · 2003 – 2020
+                            </h6>
+                            <p class="mt-3">
+                                Founded and operated a computer training center in Pakokku,
+                                teaching thousands of students from universities and
+                                technology institutes in programming, web development,
+                                hardware, and final‑year projects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="fw-bold">
+                                Supervisor
+                            </h5>
+                            <h6 class="text-primary">
+                                Industrial Painting Sector (Singapore) · 2013 – 2015
+                            </h6>
+                            <p class="mt-3">
+                                Gained international work experience in Singapore,
+                                developing discipline, leadership, teamwork, and
+                                organizational skills in an industrial environment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Projects & Platforms</h2>
+                <p class="text-muted">
+                    Selected works in education, systems, and web platforms
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card h-100 border-0 shadow-sm">
+                        <img src="{{ asset('images/projects/gacportal.png') }}" class="card-img-top"
+                            alt="Education Platform">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Education Platform (Student Portal)</h5>
+                            <p class="text-muted small">
+                                Student management, course enrollment, and reporting system
+                                for education consultancy operations.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary">Laravel</span>
+                                <span class="badge bg-secondary">PHP</span>
+                                <span class="badge bg-dark">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card h-100 border-0 shadow-sm">
+                        <img src="{{ asset('images/projects/eduvalleymm.png') }}" class="card-img-top"
+                            alt="Company Website">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Company Websites</h5>
+                            <p class="text-muted small">
+                                Professional websites with responsive UI, SEO optimization,
+                                and modern design standards.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary">Laravel</span>
+                                <span class="badge bg-info text-dark">Bootstrap</span>
+                                <span class="badge bg-warning text-dark">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card h-100 border-0 shadow-sm">
+                        <img src="{{ asset('images/projects/restaurant-pos.jpg') }}" class="card-img-top"
+                            alt="Training System">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Restaurant POS</h5>
+                            <p class="text-muted small">
+                                Sales, Order, and Inventory Management System
+                                for small to medium-sized restaurants and cafes.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-success">MySQL</span>
+                                <span class="badge bg-primary">Laravel</span>
+                                <span class="badge bg-secondary">REST API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-white">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Skills & Technology Stack</h2>
+                <p class="text-muted">
+                    Technologies and expertise built through real‑world experience
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Frontend -->
+                <div class="col-md-4">
+                    <div class="skill-card h-100 text-center">
+                        <div class="skill-icon text-primary">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <h5 class="fw-bold">Frontend</h5>
+                        <p>
+                            HTML, CSS, JavaScript<br>
+                            jQuery, Bootstrap 5
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="col-md-4">
+                    <div class="skill-card h-100 text-center">
+                        <div class="skill-icon text-success">
+                            <i class="bi bi-server"></i>
+                        </div>
+                        <h5 class="fw-bold">Backend</h5>
+                        <p>
+                            PHP, Laravel Framework<br>
+                            Java, Spring Boot
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="col-md-4">
+                    <div class="skill-card h-100 text-center">
+                        <div class="skill-icon text-warning">
+                            <i class="bi bi-database"></i>
+                        </div>
+                        <h5 class="fw-bold">Database</h5>
+                        <p>
+                            MySQL<br>
+                            Oracle Database<br>
+                            Microsoft SQL Server
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="col-md-4">
+                    <div class="skill-card h-100 text-center">
+                        <div class="skill-icon text-info">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+                        <h5 class="fw-bold">Education & Training</h5>
+                        <p>
+                            Programming Instruction<br>
+                            Project Supervision<br>
+                            Thesis & Presentation Support
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Hardware -->
+                <div class="col-md-4">
+                    <div class="skill-card h-100 text-center">
+                        <div class="skill-icon text-danger">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h5 class="fw-bold">Hardware & IoT</h5>
+                        <p>
+                            Arduino<br>
+                            Raspberry Pi
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Other -->
+                <div class="col-md-4">
+                    <div class="skill-card h-100 text-center">
+                        <div class="skill-icon text-secondary">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h5 class="fw-bold">Other Technologies</h5>
+                        <p>
+                            Git & GitHub<br>
+                            System Design<br>
+                            Business Software Solutions
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+
+                    <h2 class="fw-bold mb-3">Let’s Work Together</h2>
+                    <p class="text-muted mb-5">
+                        Feel free to reach out for collaboration, consulting, or educational opportunities.
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+
+                    <div class="card shadow-lg border-0 contact-card">
+                        <div class="card-body p-5 text-center">
+
+                            <h4 class="fw-bold mb-4">Contact Information</h4>
+
+                            <div class="contact-item mb-3">
+                                <strong>Name</strong>
+                                <p class="mb-0">Myo Tun Naung</p>
+                            </div>
+
+                            <div class="contact-item mb-3">
+                                <strong>Phone</strong>
+                                <p class="mb-0">+95 9 430 718 44</p>
+                            </div>
+
+                            <div class="contact-item mb-3">
+                                <strong>Email</strong>
+                                <p class="mb-0">
+                                    <a href="mailto:myotunnoung@gmail.com" class="contact-link">
+                                        myotunnoung@gmail.com
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div class="contact-item mb-4">
+                                <strong>Location</strong>
+                                <p class="mb-0">Yangon, Myanmar</p>
+                            </div>
+
+                            <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
+
+                                <a href="https://www.facebook.com/myotun.noung.9" target="_blank"
+                                    class="btn btn-primary btn-md px-4">
+                                    Facebook
+                                </a>
+
+                                <a href="https://www.youtube.com/@myotunnaung6886" target="_blank"
+                                    class="btn btn-danger btn-md px-4">
+                                    YouTube
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 @endsection
