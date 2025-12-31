@@ -5,7 +5,7 @@
 @section('content')
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section d-flex align-items-center">
+    <section id="hero" class="hero-section d-flex align-items-center">
         <div class="container">
             <div class="row align-items-center">
 
