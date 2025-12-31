@@ -192,3 +192,28 @@
 .contact-link:hover {
     text-decoration: underline;
 }
+/* NAVBAR */
+.custom-navbar {
+    background: rgba(13, 110, 253, 0.95);
+    backdrop-filter: blur(6px);
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #ffd43b !important;
+}
+section {
+    scroll-margin-top: 90px;
+}
+html {
+    scroll-behavior: smooth;
+}
