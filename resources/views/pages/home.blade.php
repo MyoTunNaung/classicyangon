@@ -113,4 +113,67 @@
     </div>
 </section>
 
+<!-- Skills Section -->
+<section id="skills" class="py-5">
+    <div class="container">
+        <h2 class="fw-bold text-center mb-5">Skills & Technology Stack</h2>
+
+        <div class="row text-center">
+
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Frontend</h5>
+                <p>
+                    HTML, CSS, JavaScript<br>
+                    jQuery, Bootstrap 5
+                </p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Backend</h5>
+                <p>
+                    PHP, Laravel Framework<br>
+                    Java, Spring Boot
+                </p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Database</h5>
+                <p>
+                    MySQL<br>
+                    Oracle Database<br>
+                    Microsoft SQL Server
+                </p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Education & Training</h5>
+                <p>
+                    Programming Instruction<br>
+                    Project Supervision<br>
+                    Thesis & Presentation Support
+                </p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Hardware & IoT</h5>
+                <p>
+                    Arduino<br>
+                    Raspberry Pi
+                </p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">Other Technologies</h5>
+                <p>
+                    Git & GitHub<br>
+                    System Design<br>
+                    Business Software Solutions
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 @endsection
