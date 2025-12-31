@@ -175,5 +175,44 @@
     </div>
 </section>
 
+<!-- Contact Section -->
+<section id="contact" class="bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+
+                <h2 class="fw-bold mb-4">Contact Information</h2>
+
+                <p class="mb-2">
+                    <strong>Name:</strong> Myo Tun Naung
+                </p>
+
+                <p class="mb-2">
+                    <strong>Phone:</strong> +95 9 430 718 44
+                </p>
+
+                <p class="mb-2">
+                    <strong>Email:</strong>
+                    <a href="mailto:myotunnoung@gmail.com" class="text-warning text-decoration-none">
+                        myotunnoung@gmail.com
+                    </a>
+                </p>
+
+                <p class="mb-2">
+                    <strong>Location:</strong> Yangon, Myanmar
+                </p>
+
+                <p class="mt-4">
+                    <a href="https://www.facebook.com/myotun.noung.9"
+                       target="_blank"
+                       class="btn btn-outline-light">
+                        Facebook Profile
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
 
 @endsection
