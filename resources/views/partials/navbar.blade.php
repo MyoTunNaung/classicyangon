@@ -15,11 +15,7 @@
                 <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                 <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                 <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item">
-                    <a class="btn btn-primary btn-sm ms-lg-3" href="#contact">
-                        Contact
-                    </a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
