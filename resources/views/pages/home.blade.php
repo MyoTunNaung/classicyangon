@@ -37,7 +37,7 @@
 
                 <!-- RIGHT IMAGE -->
                 <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                    <img src="{{ asset('pubic/images/profile.jpg') }}" class="hero-image img-fluid"
+                    <img src="{{ asset('public/images/profile.jpg') }}" class="hero-image img-fluid"
                         alt="Myo Tun Naung – Software Developer & IT Educator">
                 </div>
 
