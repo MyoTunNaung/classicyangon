@@ -216,7 +216,39 @@
             <div class="row g-4">
 
                 <!-- Project 1 -->
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-6">
+                    <div class="card project-card h-100 border-0 shadow-sm">
+                        <img src="{{ asset('public/images/projects/drrdroadchart.png') }}" class="card-img-top"
+                            alt="DRRD Road Chart & Road Report Platform">
+
+                        <div class="card-body">
+                            <h5 class="fw-bold">
+                                DRRD Road Chart & Road Report Platform
+                                <span class="d-block small text-muted">
+                                    Government Road Management System (2025)
+                                </span>
+                            </h5>
+
+                            <p class="text-muted small">
+                                A nationwide government platform developed for the Department of Rural Road
+                                Development (DRRD) to manage road and bridge data across Myanmar.
+                                The system enables structured reporting, verification, and monitoring
+                                from township level up to national level.
+                            </p>
+
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-success">Live System</span>
+                                <span class="badge bg-primary">Government Project</span>
+                                <span class="badge bg-info text-dark">Laravel</span>
+                                <span class="badge bg-secondary">PHP</span>
+                                <span class="badge bg-dark">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
                         <img src="{{ asset('public/images/projects/gacportal.png') }}" class="card-img-top"
                             alt="Education Platform">
@@ -235,8 +267,28 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="col-md-6 col-lg-4">
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="card project-card h-100 border-0 shadow-sm">
+                        <img src="{{ asset('public/images/projects/restaurant-pos.jpg') }}" class="card-img-top"
+                            alt="Training System">
+                        <div class="card-body">
+                            <h5 class="fw-bold">Restaurant POS</h5>
+                            <p class="text-muted small">
+                                Sales, Order, and Inventory Management System
+                                for small to medium-sized restaurants and cafes.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-success">MySQL</span>
+                                <span class="badge bg-primary">Laravel</span>
+                                <span class="badge bg-secondary">REST API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
                         <img src="{{ asset('public/images/projects/eduvalleymm.png') }}" class="card-img-top"
                             alt="Company Website">
@@ -255,25 +307,6 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('public/images/projects/restaurant-pos.jpg') }}" class="card-img-top"
-                            alt="Training System">
-                        <div class="card-body">
-                            <h5 class="fw-bold">Restaurant POS</h5>
-                            <p class="text-muted small">
-                                Sales, Order, and Inventory Management System
-                                for small to medium-sized restaurants and cafes.
-                            </p>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge bg-success">MySQL</span>
-                                <span class="badge bg-primary">Laravel</span>
-                                <span class="badge bg-secondary">REST API</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>
