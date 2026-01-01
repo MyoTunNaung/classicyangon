@@ -208,9 +208,11 @@
         <div class="container">
 
             <div class="text-center mb-5">
-                <h2 class="fw-bold">Projects & Platforms</h2>
-                <p class="text-muted">
-                    Selected works in education, systems, and web platforms
+                <h2 class="fw-bold  mb-2">
+                    Client Projects & Platforms
+                </h2>
+                <p class="text-muted mb-5">
+                    Real‑world systems built and used by organizations
                 </p>
             </div>
 
