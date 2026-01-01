@@ -486,17 +486,30 @@
 
                             <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
 
+                                <!-- Facebook -->
                                 <a href="https://www.facebook.com/myotun.noung.9" target="_blank"
-                                    class="btn btn-primary btn-md px-4">
-                                    Facebook
+                                    class="btn btn-primary btn-icon">
+                                    <i class="bi bi-facebook"></i>
                                 </a>
 
+                                <!-- YouTube -->
                                 <a href="https://www.youtube.com/@myotunnaung6886" target="_blank"
-                                    class="btn btn-danger btn-md px-4">
-                                    YouTube
+                                    class="btn btn-danger btn-icon">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+
+                                <!-- Viber -->
+                                <a href="viber://chat?number=+95943071844" class="btn btn-purple btn-icon">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </a>
+
+                                <!-- WhatsApp -->
+                                <a href="https://wa.me/95943071844" target="_blank" class="btn btn-success btn-icon">
+                                    <i class="bi bi-whatsapp"></i>
                                 </a>
 
                             </div>
+
 
                         </div>
                     </div>
