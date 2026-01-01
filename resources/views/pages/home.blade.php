@@ -337,7 +337,7 @@
     <section id="skills" class="py-5 bg-white">
         <div class="container">
 
-            <div class="text-center mb-5">
+            <div class="text-center mb-3">
                 <h2 class="fw-bold">Skills & Technology Stack</h2>
                 <p class="text-muted">
                     Technologies and expertise built through real‑world experience
