@@ -16,7 +16,7 @@
                     </h1>
 
                     <h4 class="bg-light text-primary mb-3">
-                        Professional Software Developer & Computer Teacher
+                        Professional Software Developer & Technology Educator
                     </h4>
 
                     <p class="hero-text mb-4">
@@ -63,18 +63,15 @@
                     <div class="profile-card h-100 shadow-sm p-4 text-center">
                         <h5 class="fw-bold mb-3">Who I Am</h5>
                         <p class="profile-text mb-0">
-                            I am a <strong>Professional Software Developer</strong>
-                            and <strong>Computer Teacher</strong> with over
+                            I am a <strong>Professional Software Developer</strong> with over
                             <strong>20+ years of experience</strong> in computer science,
                             software development, and IT education.
-                            I graduated from
-                            <strong>University of Computer Studies, Mandalay (UCSM)</strong>
-                            with a
-                            <strong>B.C.Tech (Honours)</strong>.
+                            I graduated from the <strong>University of Computer Studies, Mandalay (UCSM)</strong>
+                            with a <strong>B.C.Tech (Honours)</strong> in Computer Technology.
                         </p>
-
                     </div>
                 </div>
+
 
                 <!-- Card 2: What I’ve Done -->
                 <div class="col-md-4">
@@ -335,11 +332,6 @@
 
         </div>
     </section>
-
-
-
-
-
 
     <!-- Skills Section -->
     <section id="skills" class="py-5 bg-white">
