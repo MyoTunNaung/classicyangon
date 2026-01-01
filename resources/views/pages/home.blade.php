@@ -48,43 +48,62 @@
     <!-- Profile Section -->
     <section id="profile" class="py-5 bg-light">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-9">
 
-                    <div class="profile-card shadow-sm p-4 p-md-5 text-center">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Professional Profile</h2>
+                <p class="text-muted mt-2">
+                    Experience, expertise, and vision in technology & education
+                </p>
+            </div>
 
-                        <h2 class="fw-bold mb-4">Professional Profile</h2>
+            <div class="row g-4">
 
-                        <!-- Paragraph 1 -->
-                        <p class="profile-lead mb-4">
+                <!-- Card 1: Who I Am -->
+                <div class="col-md-4">
+                    <div class="profile-card h-100 shadow-sm p-4 text-center">
+                        <h5 class="fw-bold mb-3">Who I Am</h5>
+                        <p class="profile-text mb-0">
                             I am a <span class="highlight">Professional Software Developer</span>
                             and <span class="highlight">Computer Teacher</span> with over
                             <strong>20+ years of experience</strong> in computer science,
                             software development, and IT education.
-                            I began my academic journey at the
-                            <span class="highlight">University of Computer Studies, Mandalay (UCSM)</span>,
-                            where I earned a
-                            <span class="highlight">B.C.Tech (Honours) – Bachelor of Computer Technology</span>.
+                            I graduated from
+                            <span class="highlight">University of Computer Studies, Mandalay (UCSM)</span>
+                            with a
+                            <span class="highlight">B.C.Tech (Honours)</span>.
                         </p>
-
-                        <!-- Paragraph 2 -->
-                        <p class="profile-text mb-0">
-                            Since 2003, I have dedicated my career to teaching, mentoring students,
-                            and building real‑world software solutions for businesses and institutions.
-                        </p>
-
-                        <!-- Paragraph 3 -->
-                        <p class="profile-text mb-0">
-                            My mission & vision is to empower students, educators, and organizations through
-                            practical technology, modern software solutions, and sustainable digital platforms.
-                        </p>
-
                     </div>
-
                 </div>
+
+                <!-- Card 2: What I’ve Done -->
+                <div class="col-md-4">
+                    <div class="profile-card h-100 shadow-sm p-4 text-center">
+                        <h5 class="fw-bold mb-3">What I’ve Done</h5>
+                        <p class="profile-text mb-0">
+                            Since 2003, I have dedicated my career to teaching,
+                            mentoring students, and building real‑world software
+                            solutions for businesses and institutions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Mission & Vision -->
+                <div class="col-md-4">
+                    <div class="profile-card h-100 shadow-sm p-4 text-center">
+                        <h5 class="fw-bold mb-3">Mission & Vision</h5>
+                        <p class="profile-text mb-0">
+                            My mission and vision is to empower students,
+                            educators, and organizations through practical
+                            technology, modern software solutions, and
+                            sustainable digital platforms.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+
 
     <!-- Experience Section -->
     <section id="experience" class="bg-light py-5">
