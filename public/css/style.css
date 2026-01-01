@@ -92,6 +92,7 @@
 }
 
 .project-card {
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 14px;
     overflow: hidden;
@@ -101,6 +102,7 @@
     transform: translateY(-8px);
     box-shadow: 0 22px 40px rgba(0,0,0,0.15);
 }
+
 
 .project-card .badge {
     font-weight: 500;
@@ -269,9 +271,4 @@ html {
 .btn-purple:hover {
     background-color: #5b48d6;
     color: #fff;
-}
-
-
-.project-preview {
-    cursor: pointer;
 }
