@@ -218,9 +218,9 @@
                 <!-- Project 1 -->
                 <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('public/images/projects/drrdroadchart.png') }}" class="card-img-top project-preview"
-                            alt="DRRD Road Chart & Road Report Platform" data-bs-toggle="modal"
-                            data-bs-target="#imagePreviewModal"
+                        <img src="{{ asset('public/images/projects/drrdroadchart.png') }}"
+                            class="card-img-top project-preview" alt="DRRD Road Chart & Road Report Platform"
+                            data-bs-toggle="modal" data-bs-target="#imagePreviewModal"
                             data-img="{{ asset('public/images/projects/drrdroadchart.png') }}">
 
                         <div class="card-body">
@@ -274,8 +274,9 @@
                 <!-- Project 3 -->
                 <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('public/images/projects/restaurant-pos.jpg') }}" class="card-img-top project-preview"
-                            alt="Restaurant POS System" data-bs-toggle="modal" data-bs-target="#imagePreviewModal"
+                        <img src="{{ asset('public/images/projects/restaurant-pos.jpg') }}"
+                            class="card-img-top project-preview" alt="Restaurant POS System" data-bs-toggle="modal"
+                            data-bs-target="#imagePreviewModal"
                             data-img="{{ asset('public/images/projects/restaurant-pos.jpg') }}">
 
                         <div class="card-body">
@@ -296,8 +297,9 @@
                 <!-- Project 4 -->
                 <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('public/images/projects/eduvalleymm.png') }}" class="card-img-top project-preview"
-                            alt="Company Website" data-bs-toggle="modal" data-bs-target="#imagePreviewModal"
+                        <img src="{{ asset('public/images/projects/eduvalleymm.png') }}"
+                            class="card-img-top project-preview" alt="Company Website" data-bs-toggle="modal"
+                            data-bs-target="#imagePreviewModal"
                             data-img="{{ asset('public/images/projects/eduvalleymm.png') }}">
 
                         <div class="card-body">
@@ -560,11 +562,13 @@
         </div>
     </section>
 
-
     <!-- Image Preview Modal -->
     <div class="modal fade" id="imagePreviewModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content border-0 shadow">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
                 <div class="modal-body p-2 text-center">
                     <img id="modalPreviewImage" src="" class="img-fluid rounded" alt="Project Preview">
                 </div>
@@ -572,17 +576,19 @@
         </div>
     </div>
 
+    @push('scripts')
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const previewImages = document.querySelectorAll(".project-preview");
-            const modalImage = document.getElementById("modalPreviewImage");
+            const modal = document.getElementById('imagePreviewModal');
+            const modalImage = document.getElementById('modalPreviewImage');
 
-            previewImages.forEach(img => {
-                img.addEventListener("click", function() {
-                    modalImage.src = this.getAttribute("data-img");
-                });
+            modal.addEventListener('show.bs.modal', function(event) {
+                const triggerImage = event.relatedTarget;
+                const imgSrc = triggerImage.getAttribute('data-img');
+                modalImage.src = imgSrc;
             });
         });
     </script>
+    @endpush
 
 @endsection
