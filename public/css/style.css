@@ -129,32 +129,7 @@
     margin-bottom: 10px;
 }
 
-#profile .card {
-    border-radius: 18px;
-}
 
-#profile p {
-    line-height: 1.8;
-    font-size: 1.05rem;
-}
-
-/* PROFILE SECTION */
-.profile-card {
-    background: #ffffff;
-    border-radius: 20px;
-}
-
-.profile-lead {
-    font-size: 1.3rem;
-    line-height: 1.9;
-    color: #212529;
-}
-
-.profile-text {
-    font-size: 1.1rem;
-    line-height: 1.9;
-    color: #495057;
-}
 
 /* Highlighted keywords */
 .highlight {
@@ -219,51 +194,40 @@ section {
 html {
     scroll-behavior: smooth;
 }
-/* PROFILE CARDS */
+
+/* PROFILE SECTION */
 .profile-card {
     background: #ffffff;
-    border-radius: 16px;
+    border-radius: 18px;
     transition: all 0.3s ease;
+
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.9s ease-out forwards;
+    animation-delay: 0.3s;
+    will-change: transform, opacity;
 }
 
 .profile-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.profile-lead {
+    font-size: 1.3rem;
+    line-height: 1.9;
+    color: #212529;
 }
 
 .profile-text {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #495057;
 }
 
-.highlight {
-    color: #0d6efd;
-    font-weight: 600;
-}
-/* PROFILE SECTION ANIMATION */
-.profile-card {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.9s ease-out forwards;
-}
-
-/* delay so it feels smooth after hero */
-.profile-card {
-    animation-delay: 0.2s;
-}
-
-/* keyframes */
 @keyframes fadeUp {
     to {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Optional: if you use 3 cards later */
-.profile-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
-    transition: all 0.3s ease;
 }
