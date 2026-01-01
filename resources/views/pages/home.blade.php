@@ -283,58 +283,34 @@
     </section>
 
     <!-- Training & Activities Section -->
-    <section id="gallery" class="py-5 bg-light">
-        <div class="container">
+    <div class="row g-3">
 
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Training & Activities</h2>
-                <p class="text-muted">
-                    Moments from training programs, student achievements, and professional activities
-                </p>
-            </div>
-
-            <div class="row g-4">
-
-                <!-- Gallery Item -->
-                <div class="col-md-4">
-                    <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/training-1.jpg') }}" alt="Training Session">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/certificate-1.jpg') }}" alt="Certificate Awarding">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/celebration-1.jpg') }}" alt="Celebration Event">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/workshop-1.jpg') }}" alt="Workshop Activity">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/students-1.jpg') }}" alt="Students Group">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/event-1.jpg') }}" alt="Professional Event">
-                    </div>
-                </div>
-
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-card">
+                <img src="{{ asset('public/images/gallery/training-1.jpg') }}" alt="Training">
             </div>
         </div>
-    </section>
+
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-card">
+                <img src="{{ asset('public/images/gallery/certificate-1.jpg') }}" alt="Certificate">
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-card">
+                <img src="{{ asset('public/images/gallery/celebration-1.jpg') }}" alt="Celebration">
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-card">
+                <img src="{{ asset('public/images/gallery/workshop-1.jpg') }}" alt="Workshop">
+            </div>
+        </div>
+
+    </div>
+
 
 
 
