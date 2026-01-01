@@ -241,3 +241,29 @@ html {
     color: #0d6efd;
     font-weight: 600;
 }
+/* PROFILE SECTION ANIMATION */
+.profile-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.9s ease-out forwards;
+}
+
+/* delay so it feels smooth after hero */
+.profile-card {
+    animation-delay: 0.2s;
+}
+
+/* keyframes */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: if you use 3 cards later */
+.profile-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
