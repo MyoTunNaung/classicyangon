@@ -295,27 +295,39 @@
 
             <div class="row g-3">
 
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/training-1.jpg') }}" alt="Training">
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/certificate-1.jpg') }}" alt="Certificate">
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="gallery-card">
                         <img src="{{ asset('public/images/gallery/celebration-1.jpg') }}" alt="Celebration">
                     </div>
                 </div>
 
-                <div class="col-6 col-md-4 col-lg-3">
+                <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/workshop-1.jpg') }}" alt="Workshop">
+                        <img src="{{ asset('public/images/gallery/certificate-1.jpg') }}" alt="Certificate">
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="gallery-card">
+                        <img src="{{ asset('public/images/gallery/event-1.jpg') }}" alt="Workshop">
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="gallery-card">
+                        <img src="{{ asset('public/images/gallery/students-1.jpg') }}" alt="Workshop">
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="gallery-card">
+                        <img src="{{ asset('public/images/gallery/training-1.jpg') }}" alt="Workshop">
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="gallery-card">
+                        <img src="{{ asset('public/images/gallery/workshop-1.jpg') }}" alt="Training">
                     </div>
                 </div>
 
