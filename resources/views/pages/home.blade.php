@@ -63,15 +63,16 @@
                     <div class="profile-card h-100 shadow-sm p-4 text-center">
                         <h5 class="fw-bold mb-3">Who I Am</h5>
                         <p class="profile-text mb-0">
-                            I am a <span class="highlight">Professional Software Developer</span>
-                            and <span class="highlight">Computer Teacher</span> with over
+                            I am a <strong>Professional Software Developer</strong>
+                            and <strong>Computer Teacher</strong> with over
                             <strong>20+ years of experience</strong> in computer science,
                             software development, and IT education.
                             I graduated from
-                            <span class="highlight">University of Computer Studies, Mandalay (UCSM)</span>
+                            <strong>University of Computer Studies, Mandalay (UCSM)</strong>
                             with a
-                            <span class="highlight">B.C.Tech (Honours)</span>.
+                            <strong>B.C.Tech (Honours)</strong>.
                         </p>
+
                     </div>
                 </div>
 
