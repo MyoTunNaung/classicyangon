@@ -270,3 +270,8 @@ html {
     background-color: #5b48d6;
     color: #fff;
 }
+
+
+.project-preview {
+    cursor: pointer;
+}

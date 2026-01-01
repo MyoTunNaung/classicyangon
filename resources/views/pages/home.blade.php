@@ -218,8 +218,10 @@
                 <!-- Project 1 -->
                 <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('public/images/projects/drrdroadchart.png') }}" class="card-img-top"
-                            alt="DRRD Road Chart & Road Report Platform">
+                        <img src="{{ asset('public/images/projects/drrdroadchart.png') }}" class="card-img-top project-preview"
+                            alt="DRRD Road Chart & Road Report Platform" data-bs-toggle="modal"
+                            data-bs-target="#imagePreviewModal"
+                            data-img="{{ asset('public/images/projects/drrdroadchart.png') }}">
 
                         <div class="card-body">
                             <h5 class="fw-bold">
@@ -250,8 +252,10 @@
                 <!-- Project 2 -->
                 <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('public/images/projects/gacportal.png') }}" class="card-img-top"
-                            alt="Education Platform">
+                        <img src="{{ asset('public/images/projects/gacportal.png') }}" class="card-img-top project-preview"
+                            alt="Education Platform" data-bs-toggle="modal" data-bs-target="#imagePreviewModal"
+                            data-img="{{ asset('public/images/projects/gacportal.png') }}">
+
                         <div class="card-body">
                             <h5 class="fw-bold">Education Platform (Student Portal)</h5>
                             <p class="text-muted small">
@@ -270,8 +274,10 @@
                 <!-- Project 3 -->
                 <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('public/images/projects/restaurant-pos.jpg') }}" class="card-img-top"
-                            alt="Training System">
+                        <img src="{{ asset('public/images/projects/restaurant-pos.jpg') }}" class="card-img-top project-preview"
+                            alt="Restaurant POS System" data-bs-toggle="modal" data-bs-target="#imagePreviewModal"
+                            data-img="{{ asset('public/images/projects/restaurant-pos.jpg') }}">
+
                         <div class="card-body">
                             <h5 class="fw-bold">Restaurant POS</h5>
                             <p class="text-muted small">
@@ -290,8 +296,10 @@
                 <!-- Project 4 -->
                 <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('public/images/projects/eduvalleymm.png') }}" class="card-img-top"
-                            alt="Company Website">
+                        <img src="{{ asset('public/images/projects/eduvalleymm.png') }}" class="card-img-top project-preview"
+                            alt="Company Website" data-bs-toggle="modal" data-bs-target="#imagePreviewModal"
+                            data-img="{{ asset('public/images/projects/eduvalleymm.png') }}">
+
                         <div class="card-body">
                             <h5 class="fw-bold">Company Websites</h5>
                             <p class="text-muted small">
@@ -552,5 +560,29 @@
         </div>
     </section>
 
+
+    <!-- Image Preview Modal -->
+    <div class="modal fade" id="imagePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-body p-2 text-center">
+                    <img id="modalPreviewImage" src="" class="img-fluid rounded" alt="Project Preview">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const previewImages = document.querySelectorAll(".project-preview");
+            const modalImage = document.getElementById("modalPreviewImage");
+
+            previewImages.forEach(img => {
+                img.addEventListener("click", function() {
+                    modalImage.src = this.getAttribute("data-img");
+                });
+            });
+        });
+    </script>
 
 @endsection
