@@ -298,37 +298,37 @@
                 <!-- Gallery Item -->
                 <div class="col-md-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('images/gallery/training-1.jpg') }}" alt="Training Session">
+                        <img src="{{ asset('public/images/gallery/training-1.jpg') }}" alt="Training Session">
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('images/gallery/certificate-1.jpg') }}" alt="Certificate Awarding">
+                        <img src="{{ asset('public/images/gallery/certificate-1.jpg') }}" alt="Certificate Awarding">
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('images/gallery/celebration-1.jpg') }}" alt="Celebration Event">
+                        <img src="{{ asset('public/images/gallery/celebration-1.jpg') }}" alt="Celebration Event">
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('images/gallery/workshop-1.jpg') }}" alt="Workshop Activity">
+                        <img src="{{ asset('public/images/gallery/workshop-1.jpg') }}" alt="Workshop Activity">
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('images/gallery/students-1.jpg') }}" alt="Students Group">
+                        <img src="{{ asset('public/images/gallery/students-1.jpg') }}" alt="Students Group">
                     </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('images/gallery/event-1.jpg') }}" alt="Professional Event">
+                        <img src="{{ asset('public/images/gallery/event-1.jpg') }}" alt="Professional Event">
                     </div>
                 </div>
 
