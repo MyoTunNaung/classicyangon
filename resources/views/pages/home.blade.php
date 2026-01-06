@@ -37,7 +37,7 @@
 
                 <!-- RIGHT IMAGE -->
                 <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                    <img src="{{ asset('public/images/profile.jpg') }}" class="hero-image img-fluid"
+                    <img src="{{ asset('images/profile.jpg') }}" class="hero-image img-fluid"
                         alt="Myo Tun Naung – Software Developer & IT Educator">
                 </div>
 
@@ -218,10 +218,10 @@
                 <!-- Project 1 -->
                 <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('public/images/projects/drrdroadchart.png') }}"
+                        <img src="{{ asset('images/projects/drrdroadchart.png') }}"
                             class="card-img-top project-preview" alt="DRRD Road Chart & Road Report Platform"
                             data-bs-toggle="modal" data-bs-target="#imagePreviewModal"
-                            data-img="{{ asset('public/images/projects/drrdroadchart.png') }}">
+                            data-img="{{ asset('images/projects/drrdroadchart.png') }}">
 
                         <div class="card-body">
                             <h5 class="fw-bold">
@@ -252,9 +252,9 @@
                 <!-- Project 2 -->
                 <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('public/images/projects/gacportal.png') }}" class="card-img-top project-preview"
+                        <img src="{{ asset('images/projects/gacportal.png') }}" class="card-img-top project-preview"
                             alt="Education Platform" data-bs-toggle="modal" data-bs-target="#imagePreviewModal"
-                            data-img="{{ asset('public/images/projects/gacportal.png') }}">
+                            data-img="{{ asset('images/projects/gacportal.png') }}">
 
                         <div class="card-body">
                             <h5 class="fw-bold">Education Platform (Student Portal)</h5>
@@ -274,10 +274,10 @@
                 <!-- Project 3 -->
                 <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('public/images/projects/restaurant-pos.jpg') }}"
+                        <img src="{{ asset('images/projects/restaurant-pos.jpg') }}"
                             class="card-img-top project-preview" alt="Restaurant POS System" data-bs-toggle="modal"
                             data-bs-target="#imagePreviewModal"
-                            data-img="{{ asset('public/images/projects/restaurant-pos.jpg') }}">
+                            data-img="{{ asset('images/projects/restaurant-pos.jpg') }}">
 
                         <div class="card-body">
                             <h5 class="fw-bold">Restaurant POS</h5>
@@ -297,10 +297,10 @@
                 <!-- Project 4 -->
                 <div class="col-md-6 col-lg-6">
                     <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="{{ asset('public/images/projects/eduvalleymm.png') }}"
+                        <img src="{{ asset('images/projects/eduvalleymm.png') }}"
                             class="card-img-top project-preview" alt="Company Website" data-bs-toggle="modal"
                             data-bs-target="#imagePreviewModal"
-                            data-img="{{ asset('public/images/projects/eduvalleymm.png') }}">
+                            data-img="{{ asset('images/projects/eduvalleymm.png') }}">
 
                         <div class="card-body">
                             <h5 class="fw-bold">Company Websites</h5>
@@ -337,37 +337,37 @@
 
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/celebration-1.jpg') }}" alt="Celebration">
+                        <img src="{{ asset('images/gallery/celebration-1.jpg') }}" alt="Celebration">
                     </div>
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/certificate-1.jpg') }}" alt="Certificate">
+                        <img src="{{ asset('images/gallery/certificate-1.jpg') }}" alt="Certificate">
                     </div>
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/event-1.jpg') }}" alt="Workshop">
+                        <img src="{{ asset('images/gallery/event-1.jpg') }}" alt="Workshop">
                     </div>
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/students-1.jpg') }}" alt="Workshop">
+                        <img src="{{ asset('images/gallery/students-1.jpg') }}" alt="Workshop">
                     </div>
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/training-1.jpg') }}" alt="Workshop">
+                        <img src="{{ asset('images/gallery/training-1.jpg') }}" alt="Workshop">
                     </div>
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-4">
                     <div class="gallery-card">
-                        <img src="{{ asset('public/images/gallery/workshop-1.jpg') }}" alt="Training">
+                        <img src="{{ asset('images/gallery/workshop-1.jpg') }}" alt="Training">
                     </div>
                 </div>
 

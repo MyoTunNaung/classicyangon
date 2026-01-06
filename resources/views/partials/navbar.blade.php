@@ -3,7 +3,7 @@
 
         <!-- BRAND -->
         <a class="navbar-brand d-flex align-items-center fw-bold" href="#hero">
-            <img src="{{ asset('public/images/logo.png') }}"
+            <img src="{{ asset('images/logo.png') }}"
                  alt="Classic Logo"
                  height="36"
                  class="me-2">
