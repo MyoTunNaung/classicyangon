@@ -12,7 +12,7 @@
                 <!-- LEFT CONTENT -->
                 <div class="col-lg-6 text-center text-lg-start">
                     <h1 class="hero-title mb-3">
-                        Myo Tun Naung
+                        Myo Tun Naung - SayarMyo
                     </h1>
 
                     <h4 class="bg-light text-primary mb-3">
