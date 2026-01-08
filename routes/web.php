@@ -16,13 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-// Route::get('/', [ProfileController::class, 'index'])->name('profile');
-
 Route::get('/', function () {
-    return view('pages.home');
+    return view('welcome');
 });
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -7,10 +7,8 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}" />
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -19,11 +17,7 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 </head>
 
@@ -33,8 +27,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top">
             <div class="container">
 
-                <a class="navbar-brand fw-bold" href="{{ url('/') }}">
-                    <img src="{{ asset('images/logo.png') }}" alt="Classic Logo" height="36" class="me-2">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
 
@@ -47,10 +40,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a href="{{ url('/') }}" class="nav-link">Founder</a></li>
-                        <li class="nav-item"><a href="{{ url('/user/organizations') }}" class="nav-link">Organizations</a></li>
-                        <li class="nav-item"><a href="{{ url('/user/teachers') }}" class="nav-link">Teachers</a></li>
-                        <li class="nav-item"><a href="{{ url('/user/courses') }}" class="nav-link">Courses</a></li>
+                        <li class="nav-item"><a href="{{ url('/home') }}" class="nav-link">Dashboard</a></li>
+                        <li class="nav-item"><a href="{{ url('/admin/organizations') }}" class="nav-link">Organizations</a></li>
+                        <li class="nav-item"><a href="{{ url('/admin/teachers') }}" class="nav-link">Teachers</a></li>
+                        <li class="nav-item"><a href="{{ url('/admin/courses') }}" class="nav-link">Courses</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -76,11 +69,6 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-
-                                    <a class="dropdown-item" href="{{ url('/home') }}">
-                                        Dashboard
-                                    </a>
-
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
