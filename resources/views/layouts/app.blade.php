@@ -19,11 +19,13 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
+    <!-- Custom CSS (override Bootstrap here) -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
 
 </head>
 

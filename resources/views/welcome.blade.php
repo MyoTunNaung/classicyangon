@@ -9,7 +9,7 @@
                 <!-- LEFT CONTENT -->
                 <div class="col-lg-6 text-center text-lg-start">
                     <h1 class="hero-title mb-3">
-                        Myo Tun Naung - SayarMyo
+                        Myo Tun Naung (SayarMyo)
                     </h1>
 
                     <h4 class="bg-light text-primary mb-3">
@@ -22,7 +22,7 @@
                         Specialized in PHP, Laravel, and modern web technologies.
                     </p>
 
-                    <div class="hero-buttons">
+                    <div>
 
                         <a href="#profile" class="btn btn-outline-primary btn-md">Profile</a>
                         <a href="#experience" class="btn btn-outline-primary btn-md">Experience</a>
