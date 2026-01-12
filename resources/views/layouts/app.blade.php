@@ -51,8 +51,6 @@
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item"><a href="{{ url('/') }}" class="nav-link">Founder</a></li>
                         <li class="nav-item"><a href="{{ url('/user/organizations') }}" class="nav-link">Organizations</a></li>
-                        <li class="nav-item"><a href="{{ url('/user/teachers') }}" class="nav-link">Teachers</a></li>
-                        <li class="nav-item"><a href="{{ url('/user/courses') }}" class="nav-link">Courses</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
