@@ -30,12 +30,12 @@ class OrganizationController extends Controller
             'logo' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
-        $data = $request->only(['name', 'description', 'status', 'remark']);
+        $data = $request->only(['name', 'description','owner_id', 'status', 'remark']);
 
         // Upload logo
         if ($request->hasFile('logo')) {
             $logoName = time().'_'.$request->logo->getClientOriginalName();
-            $request->logo->move(public_path('images/organizations'), $logoName);
+            $request->logo->move('images/organizations', $logoName);
             $data['logo'] = $logoName;
         }
 
@@ -71,12 +71,12 @@ class OrganizationController extends Controller
 
             // Delete old logo
             if ($organization->logo &&
-                File::exists(public_path('images/organizations/'.$organization->logo))) {
-                File::delete(public_path('images/organizations/'.$organization->logo));
+                File::exists('images/organizations/'.$organization->logo)) {
+                File::delete('images/organizations/'.$organization->logo);
             }
 
             $logoName = time().'_'.$request->logo->getClientOriginalName();
-            $request->logo->move(public_path('images/organizations'), $logoName);
+            $request->logo->move('images/organizations', $logoName);
             $data['logo'] = $logoName;
         }
 
@@ -98,9 +98,9 @@ class OrganizationController extends Controller
         // 2. Delete logo file if exists
         if (
             $organization->logo &&
-            File::exists(public_path('images/organizations/' . $organization->logo))
+            File::exists('images/organizations/' . $organization->logo)
         ) {
-            File::delete(public_path('images/organizations/' . $organization->logo));
+            File::delete('images/organizations/' . $organization->logo);
         }
 
         // 3. Delete organization record
