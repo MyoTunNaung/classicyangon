@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\File;
 
+use Illuminate\Pagination\Paginator;
+
+Paginator::useBootstrap();
+
 class OrganizationController extends Controller
 {
     public function index()

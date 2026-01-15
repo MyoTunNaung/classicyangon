@@ -49,8 +49,38 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a href="{{ url('/') }}" class="nav-link">Founder</a></li>
-                        <li class="nav-item"><a href="{{ url('/user/organizations') }}" class="nav-link">Organizations</a></li>
+
+                        <li class="nav-item">
+                            <a href="{{ url('/') }}" class="nav-link">
+                                Founder
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('user.organizations.index') }}" class="nav-link">
+                                Organizations
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('user.teachers.index') }}" class="nav-link">
+                                Teachers
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('user.categories.index') }}" class="nav-link">
+                                Categories
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('user.courses.index') }}" class="nav-link">
+                                Courses
+                            </a>
+                        </li>
+
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -77,9 +107,15 @@
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-                                    <a class="dropdown-item" href="{{ url('/home') }}">
-                                        Dashboard
-                                    </a>
+
+                                    {{-- Dashboard --}}
+                                    @can('dashboard')
+                                        <a class="dropdown-item" href="{{ url('/dashboard') }}">
+                                            <i class="bi bi-speedometer2 me-2"></i>
+                                            Admin Dashboard
+                                        </a>
+                                    @endcan
+
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
@@ -91,6 +127,7 @@
                                         @csrf
                                     </form>
                                 </div>
+
                             </li>
                         @endguest
                     </ul>

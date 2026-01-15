@@ -4,8 +4,14 @@
 
 @section('content')
     <div class="container">
+
+         {{-- Page Header --}}
         <div class="d-flex justify-content-between align-items-center mb-3">
-            <h4>Organizations</h4>
+
+            <h4 class="fw-bold mb-0">
+                <i class="bi bi-buildings me-1"></i>
+                Organizations <span class="text-primary">({{ $organizations->total() }})</span>
+            </h4>
 
             @can('organization.create')
                 <a href="{{ route('admin.organizations.create') }}" class="btn btn-primary">
@@ -14,6 +20,7 @@
             @endcan
         </div>
 
+         {{-- Table --}}
         <div class="card">
             <div class="card-body table-responsive">
                 <table class="table table-bordered table-hover">
@@ -81,5 +88,12 @@
                 {{ $organizations->links() }}
             </div>
         </div>
+
+        {{-- Pagination --}}
+        <div class="mt-3">
+            {{ $organizations->links() }}
+        </div>
+
+
     </div>
 @endsection

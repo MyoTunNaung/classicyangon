@@ -3,33 +3,59 @@
 @section('title', $organization->name)
 
 @section('content')
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h3>{{ $organization->name }}</h3>
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
 
-                @if ($organization->logo)
-                    <img src="{{ asset('images/organizations/' . $organization->logo) }}" alt="Logo" height="40">
-                @endif
+            <div class="card border-1 shadow-sm rounded-4">
+                <div class="card-body p-4">
 
-                <p class="text-muted">
-                    Owner: {{ $organization->owner?->name ?? 'N/A' }}
-                </p>
+                    {{-- Header --}}
+                    <div class="d-flex align-items-center mb-4">
+                        @if ($organization->logo)
+                            <img src="{{ asset('images/organizations/' . $organization->logo) }}"
+                                 class="img-fluid me-3"
+                                 alt="Logo"
+                                 style="max-height: 70px; object-fit: contain;">
+                        @endif
 
-                <p>
-                    {{ $organization->description }}
-                </p>
+                        <div>
+                            <h3 class="mb-1">{{ $organization->name }}</h3>
+                            <span class="badge bg-success">
+                                {{ ucfirst($organization->status) }}
+                            </span>
+                        </div>
+                    </div>
 
-                <span class="badge bg-success">
-                    {{ ucfirst($organization->status) }}
-                </span>
+                    {{-- Owner --}}
+                    <p class="text-muted mb-3">
+                        <i class="bi bi-person-circle me-1"></i>
+                        <strong>Owner:</strong>
+                        {{ $organization->owner?->name ?? 'N/A' }}
+                    </p>
 
-                <div class="mt-3">
-                    <a href="{{ route('user.organizations.index') }}" class="btn btn-secondary">
-                        Back
-                    </a>
+                    {{-- Description --}}
+                    <div class="mb-4">
+                        <h6 class="fw-semibold text-secondary mb-2">
+                            About this organization
+                        </h6>
+                        <p class="text-muted mb-0">
+                            {!! nl2br(e($organization->description)) !!}
+                        </p>
+                    </div>
+
+                    {{-- Actions --}}
+                    <div class="d-flex justify-content-end">
+                        <a href="{{ route('user.organizations.index') }}"
+                           class="btn btn-outline-secondary btn-sm px-4">
+                            ← Back
+                        </a>
+                    </div>
+
                 </div>
             </div>
+
         </div>
     </div>
+</div>
 @endsection

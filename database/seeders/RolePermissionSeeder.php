@@ -18,11 +18,33 @@ class RolePermissionSeeder extends Seeder
     public function run(): void
     {
         $permissions = [
+
+            'dashboard',
+
             'organization.view',
             'organization.create',
             'organization.edit',
             'organization.delete',
             'organization.owner',
+
+            'teacher.view',
+            'teacher.create',
+            'teacher.edit',
+            'teacher.delete',
+            'teacher.owner',
+
+            'category.view',
+            'category.create',
+            'category.edit',
+            'category.delete',
+            'category.owner',
+
+            'course.view',
+            'course.create',
+            'course.edit',
+            'course.delete',
+            'course.owner',
+
         ];
 
         foreach ($permissions as $permission) {

@@ -3,37 +3,77 @@
 @section('title', 'My Organizations')
 
 @section('content')
-<div class="container">
-    <h4 class="mb-3">Organizations</h4>
+<div class="container py-4">
 
-    <div class="row">
+
+     {{-- Page Title --}}
+    <div class="mb-4 text-center">
+        <h4 class="fw-bold mb-1">Organizations</h4>
+        <p class="text-muted mb-0">Discover trusted education partners</p>
+    </div>
+
+
+    <div class="row g-4">
         @forelse ($organizations as $organization)
-            <div class="col-md-4 mb-3">
-                <div class="card h-100">
+            <div class="col-sm-6 col-md-4">
+                <div class="card h-100 border-1 shadow-sm org-card">
 
-                    @if ($organization->logo)
-                        <img src="{{ asset('storage/'.$organization->logo) }}"
-                             class="card-img-top" alt="Logo">
-                    @endif
+                    {{-- Logo --}}
+                    <div class="text-center p-3">
+                        @if ($organization->logo)
+                            <img src="{{ asset('images/organizations/' . $organization->logo) }}"
+                                 class="img-fluid org-logo"
+                                 alt="Logo">
+                        @else
+                            <div class="text-muted small">No Logo</div>
+                        @endif
+                    </div>
 
+                    {{-- Body --}}
                     <div class="card-body">
-                        <h5 class="card-title">{{ $organization->name }}</h5>
-                        <p class="card-text text-muted">
+                        <h5 class="card-title mb-2">{{ $organization->name }}</h5>
+                        <p class="card-text text-muted small">
                             {{ Str::limit($organization->description, 80) }}
                         </p>
                     </div>
 
-                    <div class="card-footer text-end">
+                    {{-- Footer --}}
+                    <div class="card-footer bg-white border-1 text-end">
                         <a href="{{ route('user.organizations.show', $organization->id) }}"
-                           class="btn btn-sm btn-primary">
-                            View
+                           class="btn btn-sm btn-outline-primary">
+                            View →
                         </a>
                     </div>
                 </div>
             </div>
         @empty
-            <p class="text-muted">No organizations available.</p>
+            <div class="col-12">
+                <p class="text-muted text-center">No organizations available.</p>
+            </div>
         @endforelse
     </div>
 </div>
+
+{{-- Minimal custom CSS --}}
+<style>
+    .org-card {
+        transition: all .3s ease;
+        cursor: pointer;
+    }
+
+    .org-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 .75rem 1.5rem rgba(0,0,0,.12);
+    }
+
+    .org-logo {
+        max-height: 120px;
+        object-fit: contain;
+        transition: transform .3s ease;
+    }
+
+    .org-card:hover .org-logo {
+        transform: scale(1.05);
+    }
+</style>
 @endsection

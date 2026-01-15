@@ -23,7 +23,7 @@
     <!-- Custom CSS (override Bootstrap here) -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-     <!-- Bootstrap Icons -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 
@@ -35,7 +35,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top">
             <div class="container">
 
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand fw-bold" href="{{ url('/') }}">
                     <img src="{{ asset('images/logo.png') }}" alt="Classic Logo" height="36" class="me-2">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -49,10 +49,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a href="{{ url('/home') }}" class="nav-link">Dashboard</a></li>
-                        <li class="nav-item"><a href="{{ url('/admin/organizations') }}" class="nav-link">Organizations</a></li>
-                        <li class="nav-item"><a href="{{ url('/admin/teachers') }}" class="nav-link">Teachers</a></li>
-                        <li class="nav-item"><a href="{{ url('/admin/courses') }}" class="nav-link">Courses</a></li>
+                        <li class="nav-item"><a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -77,7 +74,19 @@
                                     {{ Auth::user()->name }}
                                 </a>
 
+
+
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
+                                    {{-- Dashboard --}}
+                                    @can('dashboard')
+                                        <a class="dropdown-item" href="{{ url('/dashboard') }}">
+                                            <i class="bi bi-speedometer2 me-2"></i>
+                                            Admin Dashboard
+                                        </a>
+                                    @endcan
+
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -95,7 +104,7 @@
             </div>
         </nav>
 
-        <main class="flex-fill py-1">
+        <main class="flex-fill py-3">
             @yield('content')
         </main>
 
