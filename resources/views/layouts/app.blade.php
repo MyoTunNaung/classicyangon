@@ -69,12 +69,6 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{ route('user.categories.index') }}" class="nav-link">
-                                Categories
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
                             <a href="{{ route('user.courses.index') }}" class="nav-link">
                                 Courses
                             </a>

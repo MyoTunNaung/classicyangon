@@ -225,7 +225,7 @@
                             <h5 class="fw-bold">
                                 DRRD Road Chart & Road Report Platform
                                 <span class="d-block small text-muted">
-                                    Government Road Management System (2025)
+                                    Government Road Management System
                                 </span>
                             </h5>
 

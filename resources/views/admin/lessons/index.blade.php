@@ -6,10 +6,10 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h4 class="fw-bold mb-0">
             <i class="bi bi-journal-text me-1"></i>
-            Courses <span class="text-primary">( {{ $courses->total() }} )</span>
+            Lessons <span class="text-primary">( {{ $lessons->total() }} )</span>
         </h4>
 
-        <a href="{{ route('admin.courses.create') }}" class="btn btn-primary btn-sm">
+        <a href="{{ route('admin.lessons.create') }}" class="btn btn-primary btn-sm">
             <i class="bi bi-plus-circle me-1"></i> Create
         </a>
     </div>
@@ -21,33 +21,43 @@
                     <tr>
                         <th>#</th>
                         <th>Title</th>
-                        <th>Category</th>
-                        <th>Teacher</th>
-                        <th>Organization</th>
+                        <th>Course</th>
+                        <th>Order</th>
+                        <th>Free</th>
                         <th>Status</th>
                         <th width="120">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($courses as $index => $course)
+                    @forelse ($lessons as $index => $lesson)
                         <tr>
-                            <td>{{ $courses->firstItem() + $index }}</td>
-                            <td>{{ $course->title }}</td>
-                            <td>{{ $course->category?->name }}</td>
-                            <td>{{ $course->teacher->user->name ?? 'N/A' }}</td>
-                            <td>{{ $course->organization?->name }}</td>
+                            <td>{{ $lessons->firstItem() + $index }}</td>
+
+                            <td>{{ $lesson->title }}</td>
+
+                            <td>{{ $lesson->course?->title }}</td>
+
+                            <td>{{ $lesson->lesson_order }}</td>
+
                             <td>
-                                <span class="badge bg-{{ $course->status === 'active' ? 'success' : 'secondary' }}">
-                                    {{ ucfirst($course->status) }}
+                                <span class="badge bg-{{ $lesson->is_free ? 'info' : 'secondary' }}">
+                                    {{ $lesson->is_free ? 'Free' : 'Paid' }}
                                 </span>
                             </td>
+
                             <td>
-                                <a href="{{ route('admin.courses.edit', $course) }}"
+                                <span class="badge bg-{{ $lesson->status === 'active' ? 'success' : 'secondary' }}">
+                                    {{ ucfirst($lesson->status) }}
+                                </span>
+                            </td>
+
+                            <td>
+                                <a href="{{ route('admin.lessons.edit', $lesson) }}"
                                    class="btn btn-outline-primary btn-sm">
                                     <i class="bi bi-pencil"></i>
                                 </a>
 
-                                <form action="{{ route('admin.courses.destroy', $course) }}"
+                                <form action="{{ route('admin.lessons.destroy', $lesson) }}"
                                       method="POST"
                                       class="d-inline"
                                       onsubmit="return confirm('Are you sure?')">
@@ -62,7 +72,7 @@
                     @empty
                         <tr>
                             <td colspan="7" class="text-center py-3">
-                                No courses found.
+                                No lessons found.
                             </td>
                         </tr>
                     @endforelse
@@ -70,9 +80,9 @@
             </table>
         </div>
 
-        @if ($courses->hasPages())
+        @if ($lessons->hasPages())
             <div class="card-footer">
-                {{ $courses->links() }}
+                {{ $lessons->links() }}
             </div>
         @endif
     </div>

@@ -5,13 +5,9 @@
 
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h4 class="fw-bold mb-0">
-            <i class="bi bi-journal-text me-1"></i>
-            Courses <span class="text-primary">( {{ $courses->total() }} )</span>
+            <i class="bi bi-people me-1"></i>
+            Enrollments
         </h4>
-
-        <a href="{{ route('admin.courses.create') }}" class="btn btn-primary btn-sm">
-            <i class="bi bi-plus-circle me-1"></i> Create
-        </a>
     </div>
 
     <div class="card">
@@ -20,37 +16,35 @@
                 <thead class="table-light">
                     <tr>
                         <th>#</th>
-                        <th>Title</th>
-                        <th>Category</th>
-                        <th>Teacher</th>
-                        <th>Organization</th>
+                        <th>Student</th>
+                        <th>Course</th>
                         <th>Status</th>
+                        <th>Enrolled At</th>
                         <th width="120">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($courses as $index => $course)
+                    @forelse ($enrollments as $index => $enrollment)
                         <tr>
-                            <td>{{ $courses->firstItem() + $index }}</td>
-                            <td>{{ $course->title }}</td>
-                            <td>{{ $course->category?->name }}</td>
-                            <td>{{ $course->teacher->user->name ?? 'N/A' }}</td>
-                            <td>{{ $course->organization?->name }}</td>
+                            <td>{{ $enrollments->firstItem() + $index }}</td>
+                            <td>{{ $enrollment->user->name }}</td>
+                            <td>{{ $enrollment->course->title }}</td>
                             <td>
-                                <span class="badge bg-{{ $course->status === 'active' ? 'success' : 'secondary' }}">
-                                    {{ ucfirst($course->status) }}
+                                <span class="badge bg-{{ $enrollment->status === 'active' ? 'success' : 'secondary' }}">
+                                    {{ ucfirst($enrollment->status) }}
                                 </span>
                             </td>
+                            <td>{{ $enrollment->created_at->format('d M Y') }}</td>
                             <td>
-                                <a href="{{ route('admin.courses.edit', $course) }}"
+                                <a href="{{ route('admin.enrollments.show', $enrollment) }}"
                                    class="btn btn-outline-primary btn-sm">
-                                    <i class="bi bi-pencil"></i>
+                                    <i class="bi bi-eye"></i>
                                 </a>
 
-                                <form action="{{ route('admin.courses.destroy', $course) }}"
+                                <form action="{{ route('admin.enrollments.destroy', $enrollment) }}"
                                       method="POST"
                                       class="d-inline"
-                                      onsubmit="return confirm('Are you sure?')">
+                                      onsubmit="return confirm('Remove this enrollment?')">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-outline-danger btn-sm">
@@ -61,8 +55,8 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="7" class="text-center py-3">
-                                No courses found.
+                            <td colspan="6" class="text-center py-3">
+                                No enrollments found.
                             </td>
                         </tr>
                     @endforelse
@@ -70,9 +64,9 @@
             </table>
         </div>
 
-        @if ($courses->hasPages())
+        @if ($enrollments->hasPages())
             <div class="card-footer">
-                {{ $courses->links() }}
+                {{ $enrollments->links() }}
             </div>
         @endif
     </div>

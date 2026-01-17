@@ -45,6 +45,30 @@ class RolePermissionSeeder extends Seeder
             'course.delete',
             'course.owner',
 
+            'lesson.view',
+            'lesson.create',
+            'lesson.edit',
+            'lesson.delete',
+            'lesson.owner',
+
+            'enrollment.view',
+            'enrollment.create',
+            'enrollment.edit',
+            'enrollment.delete',
+            'enrollment.owner',
+
+            'payment.view',
+            'payment.create',
+            'payment.edit',
+            'payment.delete',
+            'payment.owner',
+
+            'payment_method.view',
+            'payment_method.create',
+            'payment_method.edit',
+            'payment_method.delete',
+            'payment_method.owner',
+
         ];
 
         foreach ($permissions as $permission) {

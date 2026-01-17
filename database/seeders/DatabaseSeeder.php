@@ -14,6 +14,7 @@ use App\Models\Organization;
 use App\Models\Teacher;
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\Lesson;
 
 
 
@@ -252,10 +253,10 @@ class DatabaseSeeder extends Seeder
                 'organization' => 'Classic Yangon',
                 'teacher_email' => 'myotunnoung@gmail.com',
                 'courses' => [
-                    'Front End Development',
-                    'Back End Development',
-                    'Laravel',
-                    'Spring Boot',
+                    'Frontend Development (HTML,CSS,JavaScript,jQuery,Bootstrap)',
+                    'Backend Development (PHP)',
+                    'Laravel (PHP Framework)',
+                    'Spring Boot (Java Framework)',
                 ],
             ],
 
@@ -337,7 +338,46 @@ class DatabaseSeeder extends Seeder
             }
         }
 
+        // Lessons
+        $course = Course::where('title', 'Backend Development (PHP)')->first();
 
+        $lessons = [
+            ['Intro PHP, XAMPP', true],
+            ['Download XAMPP', true],
+            ['Installation XAMPP', true],
+            ['XAMPP Folder Structure htdocs', true],
+            ['htdocs/intro.php', true],
+            ['htdocs/folder-name/intro.php', false],
+            ['Variables', false],
+            ['Strings', false],
+            ['Condition', false],
+            ['Array', false],
+
+            ['Loop', false],
+            ['Function', false],
+            ['File', false],
+            ['OOP', false],
+            ['One to One Inheritance', false],
+            ['One to Many Inheritance', false],
+            ['Form Handling', false],
+            ['Cookies', false],
+            ['Sessions', false],
+            ['Summary', false],
+        ];
+
+        foreach ($lessons as $index => [$title, $isFree]) {
+            Lesson::create([
+                'course_id'    => $course->id,
+                'title'        => sprintf('%02d - %s', $index + 1, $title),
+                'lesson_order' => $index + 1,
+                'is_free'      => $isFree,
+                'status'       => 'active',
+                'content'      => null,
+                'video_url'    => null,
+                'remark'       => $isFree ? 'Free lesson' : 'Paid lesson',
+                'created_by'   => 1, // optional (admin id)
+            ]);
+        }
 
 
         // Run Role & Permission seeder

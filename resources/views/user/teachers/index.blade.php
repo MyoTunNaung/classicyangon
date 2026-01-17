@@ -11,7 +11,7 @@
         <p class="text-muted mb-0">Meet our professional educators</p>
     </div>
 
-    <div class="row g-4">
+    <div class="row g-4 justify-content-center">
         @forelse ($teachers as $teacher)
             <div class="col-md-4 col-lg-3">
                 <div class="card h-100 shadow-sm border-1

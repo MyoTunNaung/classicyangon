@@ -16,6 +16,17 @@ use App\Http\Controllers\User\CategoryController as UserCategory;
 use App\Http\Controllers\Admin\CourseController as AdminCourse;
 use App\Http\Controllers\User\CourseController as UserCourse;
 
+use App\Http\Controllers\Admin\LessonController  as AdminLesson;
+use App\Http\Controllers\User\LessonController  as UserLesson;
+
+use App\Http\Controllers\Admin\EnrollmentController  as AdminEnroll;
+use App\Http\Controllers\User\EnrollmentController  as UserEnroll;
+
+use App\Http\Controllers\Admin\PaymentController as AdminPayment;
+use App\Http\Controllers\User\PaymentController as UserPayment;
+
+use App\Http\Controllers\Admin\PaymentMethodController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,6 +59,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 /* =========================
    ADMIN ROUTES
 ========================= */
+
 Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
 
         //Admin Organization Routes
@@ -98,8 +110,57 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
 
         });
 
+        //Admin Lessons Routes
+         Route::prefix('lessons')->name('lessons.')->group(function () {
+
+            Route::get('/', [AdminLesson::class, 'index'])->middleware('permission:lesson.view')->name('index');
+            Route::get('/create', [AdminLesson::class, 'create'])->middleware('permission:lesson.create')->name('create');
+            Route::post('/', [AdminLesson::class, 'store'])->middleware('permission:lesson.create')->name('store');
+            Route::get('/{lesson}/edit', [AdminLesson::class, 'edit'])->middleware('permission:lesson.edit')->name('edit');
+            Route::put('/{lesson}', [AdminLesson::class, 'update'])->middleware('permission:lesson.edit')->name('update');
+            Route::delete('/{lesson}', [AdminLesson::class, 'destroy'])->middleware('permission:lesson.delete')->name('destroy');
+
+        });
+
+
+        //Admin Enrollment Routes
+        Route::prefix('enrollments')->name('enrollments.')->group(function () {
+
+            Route::get('/', [AdminEnroll::class, 'index'])->middleware('permission:enrollment.view')->name('index');
+            Route::get('/{enrollment}', [AdminEnroll::class, 'show'])->middleware('permission:enrollment.view')->name('show');
+            Route::put('/{enrollment}', [AdminEnroll::class, 'update'])->middleware('permission:enrollment.edit')->name('update');
+            Route::delete('/{enrollment}', [AdminEnroll::class, 'destroy'])->middleware('permission:enrollment.delete')->name('destroy');
+
+        });
+
+        //Admin Payment Routes
+        Route::prefix('payments')->name('payments.')->group(function () {
+
+            Route::get('/', [AdminPayment::class, 'index'])->middleware('permission:payment.view')->name('index');
+            Route::get('/{payment}', [AdminPayment::class, 'show'])->middleware('permission:payment.view')->name('show');
+            Route::put('/{payment}', [AdminPayment::class, 'update'])->middleware('permission:payment.edit')->name('update');
+            Route::delete('/{payment}', [AdminPayment::class, 'destroy'])->middleware('permission:payment.delete')->name('destroy');
+
+        });
+
+        //Admin Payment Methods Routes
+        Route::prefix('payment-methods')->name('payment-methods.')->group(function () {
+
+            Route::get('/', [PaymentMethodController::class, 'index'])->middleware('permission:payment_method.view')->name('index');
+            Route::get('/create', [PaymentMethodController::class, 'create'])->middleware('permission:payment_method.create')->name('create');
+            Route::post('/', [PaymentMethodController::class, 'store'])->middleware('permission:payment_method.create')->name('store');
+            Route::get('/{paymentMethod}/edit', [PaymentMethodController::class, 'edit'])->middleware('permission:payment_method.edit')->name('edit');
+            Route::put('/{paymentMethod}', [PaymentMethodController::class, 'update'])->middleware('permission:payment_method.edit')->name('update');
+            Route::delete('/{paymentMethod}', [PaymentMethodController::class, 'destroy'])->middleware('permission:payment_method.delete')->name('destroy');
+
+            Route::patch('/{paymentMethod}/toggle',[PaymentMethodController::class, 'toggle'])->middleware('permission:payment_method.edit')->name('toggle');
+
+        });
+
 
 });
+
+
 /* =========================
    USER ROUTES
 ========================= */
@@ -134,6 +195,41 @@ Route::prefix('user')->name('user.')->group(function () {
 
         Route::get('/', [UserCourse::class, 'index'])->name('index');
         Route::get('/{course}', [UserCourse::class, 'show'])->name('show');
+
+    });
+
+    // User Lesson Routes
+    Route::prefix('courses/{course}')->group(function () {
+
+        Route::prefix('lessons')->name('lessons.')->group(function () {
+            Route::get('/', [UserLesson::class, 'index'])->name('index');
+            Route::get('/{lesson}', [UserLesson::class, 'show'])->name('show');
+
+            });
+
+    });
+
+
+    //User Enrollment Routes
+    Route::prefix('courses/{course}')->group(function () {
+
+        Route::post('/enroll', [UserEnroll::class, 'store'])->name('enrollments.store');
+        Route::get('/enrollment', [UserEnroll::class, 'show'])->name('enrollments.show');
+        Route::delete('/unenroll', [UserEnroll::class, 'destroy'])->name('enrollments.destroy');
+
+    });
+
+
+});
+
+
+//User Payment Routes
+Route::prefix('user')->name('user.')->middleware('auth')->group(function () {
+
+    Route::prefix('courses/{course}')->group(function () {
+
+        Route::get('/payment', [UserPayment::class, 'create'])->name('payments.create');
+        Route::post('/payment', [UserPayment::class, 'store'])->name('payments.store');
 
     });
 

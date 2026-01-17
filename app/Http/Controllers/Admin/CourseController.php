@@ -56,7 +56,7 @@ class CourseController extends Controller
 
         if ($request->hasFile('cover_photo')) {
             $name = time() . '_' . $request->cover_photo->getClientOriginalName();
-            $request->cover_photo->move(public_path('images/courses'), $name);
+            $request->cover_photo->move('images/courses', $name);
             $data['cover_photo'] = $name;
         }
 

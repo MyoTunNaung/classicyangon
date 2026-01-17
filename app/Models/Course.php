@@ -39,4 +39,23 @@ class Course extends Model
     {
         return $this->belongsTo(Organization::class);
     }
+
+    public function lessons()
+    {
+        return $this->hasMany(Lesson::class)->orderBy('lesson_order');
+    }
+
+    public function enrollments()
+    {
+        return $this->hasMany(Enrollment::class);
+    }
+
+    public function students()
+    {
+        return $this->belongsToMany(User::class, 'enrollments')
+            ->withPivot(['status'])
+            ->withTimestamps();
+    }
+
+
 }
